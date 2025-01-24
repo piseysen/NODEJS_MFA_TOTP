@@ -22,7 +22,25 @@ Key Features of TOTP:
     npm install
     ```
 
-3. Set Up Environment Variables: Create a .env file in the root directory and add the following:
+3. MongoDB Setup with MongoDB Atlas
+    1. Create a MongoDB Atlas Account: Go to MongoDB Atlas and create a free account.
+    2. Create a Cluster: Follow the instructions to create a new cluster.
+    3. Create a Database User:
+        . Go to the "Database Access" section.
+        . Click "Add New Database User".
+        . Create a user with a username and password.
+    4. Get the Connection String:
+        . Go to the "Clusters" section.
+        . Click "Connect" for your cluster.
+        . Choose "Connect your application".
+        . Copy the connection string.
+    5. Update Environment Variables: Update the CONNECTION_STRING in the .env file with your MongoDB Atlas connection string. Replace <username> and <password> with your database user's credentials:
+
+        ```sh
+        CONNECTION_STRING=mongodb+srv://<username>:<password>@cluster0.mongodb.net/mydatabase?retryWrites=true&w=majority
+        ```
+
+4. Set Up Environment Variables: Create a .env file in the root directory and add the following:
 
    ```sh
     PORT=7001
@@ -30,7 +48,7 @@ Key Features of TOTP:
     JWT_SECRET=secret
     CONNECTION_STRING=<your-mongodb-connection-string>
     ```
-4. Run the Project:
+5. Run the Project:
 
     ```sh
     npm run dev
