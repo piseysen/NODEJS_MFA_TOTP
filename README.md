@@ -16,6 +16,10 @@ This project implements a multi-factor authentication (MFA) system using React f
 
 ## Backend
 
+```bash
+   cd backend/
+```
+
 ### Overview
 
 The backend is built with Node.js and Express. It handles user authentication, including TOTP generation and validation.
@@ -46,10 +50,14 @@ The backend is built with Node.js and Express. It handles user authentication, i
 
 3. Start the server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Client
+
+```bash
+   cd client/
+```
 
 ### Overview
 
@@ -76,7 +84,7 @@ The client is built with React. It provides a user interface for registration, l
 
 2. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Running the Project
@@ -85,3 +93,8 @@ The client is built with React. It provides a user interface for registration, l
 2. Start the frontend development server.
 3. Open the client application in your browser and register a new user.
 4. Follow the prompts to set up TOTP and log in using the generated codes.
+
+
+## Fature TODO
+
+1. Build own Authenticator App for Android and iOS (KMP --Kotlin Multiplatform)
