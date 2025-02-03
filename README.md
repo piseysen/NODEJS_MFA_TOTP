@@ -5,7 +5,7 @@ This project implements a multi-factor authentication (MFA) system using React f
 ## Project Structure
 
 - `client/`: Contains the React frontend application
-- `server/`: Contains the Node.js backend application
+- `backend/`: Contains the Node.js backend application
 
 ## Backend
 
