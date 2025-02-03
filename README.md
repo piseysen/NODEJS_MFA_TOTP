@@ -4,7 +4,10 @@ This project implements a multi-factor authentication (MFA) system using React f
 
 ## Project Screenshot
 
-![Project Screenshot](client/src/assets/register.png)
+![Register Screenshot](client/src/assets/register.png)
+![Login Screenshot](client/src/assets/login.png)
+![TOTP Setup Screenshot](client/src/assets/setup.png)
+![TOTP Validation Screenshot](client/src/assets/verify.png)
 
 ## Project Structure
 
