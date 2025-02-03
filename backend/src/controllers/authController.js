@@ -49,11 +49,18 @@ export const authStatus = async (req, res) => {
 };
 
 export const logout = async (req, res) => {
-    if(!req.user) res.status(401).json({message: 'User is not authenticated'});
     req.logout((err) => {
-        if (err) return res.status(400).json({message: 'Error logging out user'});
-        res.status(200).json({message: 'User logged out successfully'});
-    })
+        if (err) {
+            return res.status(500).json({ error: 'Error logging out', message: err.message });
+        }
+        req.session.destroy((err) => {
+            if (err) {
+                return res.status(500).json({ error: 'Error destroying session', message: err.message });
+            }
+            res.clearCookie('connect.sid', { path: '/' });
+            res.status(200).json({ message: 'User logged out successfully' });
+        });
+    });
 
 };
 
@@ -63,10 +70,8 @@ export const setup2FA = async (req, res) => {
             return res.status(401).json({ message: 'User is not authenticated' });
         }
 
-        console.log('The user is : ', req.user);
         const user = req.user;
         const secret = speakeasy.generateSecret();
-        console.log('The secret is : ', secret);
         user.twoFactorSecret = secret.base32;
         user.isMfaActive = true;
         await user.save();
