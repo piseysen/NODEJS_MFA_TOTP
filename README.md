@@ -2,6 +2,10 @@
 
 This project implements a multi-factor authentication (MFA) system using React for the frontend and Node.js for the backend.
 
+## Project Screenshot
+
+![Project Screenshot](client/src/assets/register.png)
+
 ## Project Structure
 
 - `client/`: Contains the React frontend application
