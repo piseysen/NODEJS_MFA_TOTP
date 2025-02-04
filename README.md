@@ -45,8 +45,10 @@ The backend is built with Node.js and Express. It handles user authentication, i
     ```
 
 2. Configure environment variables:
-    - `MONGO_URI`: MongoDB connection string
+    change from .env.example -> .env
+    - `CONNECTION_STRING`: MongoDB connection string
     - `JWT_SECRET`: Secret key for JWT
+    - `SESSION_SECRET`:  s a secret key (or phrase) used by web applications to sign and/or encrypt session data.
 
 3. Start the server:
     ```bash
