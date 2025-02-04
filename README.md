@@ -97,6 +97,6 @@ The client is built with React. It provides a user interface for registration, l
 4. Follow the prompts to set up TOTP and log in using the generated codes.
 
 
-## Fature TODO
+## Feature TODO
 
 1. Build own Authenticator App for Android and iOS (KMP --Kotlin Multiplatform)
